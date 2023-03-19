@@ -1,8 +1,12 @@
 import streamlit as st
 import datetime,requests
 from plotly import graph_objects as go
+from PIL import Image
 
-st.set_page_config(page_title='Marc Leipold - Weather Forecast - Project 3', page_icon=":tornado:")
+st.set_page_config(
+    page_title = 'Marc Leipold - Weather Forecast - Project 3', 
+    page_icon=":tornado:", 
+)
 
 st.title("8-DAY WEATHER FORECAST 🌧️🌥️")
 
@@ -17,9 +21,20 @@ graph=st.radio("SELECT GRAPH TYPE ",["Bar Graph","Line Graph"])
 st.markdown(
     """
     <style>
-    .reportview-container {
-        background: url("https://wallpaperaccess.com/full/1442216.jpg")
+    section.main.css-k1vhr4.egzxvld5 {
+        background: url("https://extrevity.com/wp-content/uploads/2021/11/background-pic.jpg");
+        BACKGROUND-SIZE: COVER;
     }
+    
+    .block-container.css-91z34k.egzxvld4 {
+        background: white;
+        margin-top: 90px;
+        border-radius: 16px;
+        padding: 3rem !important;
+}
+    }
+            
+}
   
     </style>
     """,
@@ -161,7 +176,7 @@ if(st.button("SUBMIT")):
         st.header(' ')
         st.header(' ')
         st.markdown("Made with :heart: by : ")
-        st.markdown("Nikhilesh Shah 🤩 && Nandita Agarwal 🤗 && Nisha Vaghela 🥰")
+        st.markdown("Marc Leipold")
  
     except KeyError:
         st.error(" Invalid city!!  Please try again !!")
